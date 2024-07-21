@@ -6,7 +6,6 @@
     @include flex(row, unset);
     padding: 0 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.37);
-
     > input {
       margin-right: auto;
       @include inputStyle(100%, 1rem 0);
@@ -20,9 +19,11 @@
       border-radius: 50%;
     }
   }
+
   .widget-container {
     @include flex(row, space-between, stretch, 2rem);
     padding: 2rem 2rem 2rem 0;
+
     .widget {
       width: 16rem;
       background-color: white;
@@ -43,6 +44,7 @@
           @include flex(row, unset, center, 0.2rem);
         }
       }
+
       .widget-circle {
         position: relative;
         @include square(5rem);
@@ -50,12 +52,12 @@
         flex: none;
         display: grid;
         place-items: center;
-        background: aquamarine;
+        background-color: aquamarine;
         &::before {
           content: "";
           position: absolute;
           @include square(4rem);
-          background: white;
+          background-color: white;
           border-radius: 100%;
         }
         span {
@@ -72,15 +74,18 @@
       background-color: white;
       border-radius: 10px;
     }
+
     .revenue-chart {
       width: 100%;
       padding: 1rem 3rem;
+
       > h2 {
         @include heading;
         margin: 1rem 0 2rem 0.25rem;
         text-align: center;
       }
     }
+
     .dashboard-categories {
       width: 100%;
       max-width: 16rem;
@@ -96,6 +101,7 @@
         overflow-y: auto;
         padding-left: 0.5rem;
       }
+
       .category-item {
         width: 100%;
         @include flex(row, space-between);
@@ -120,6 +126,45 @@
           font-size: 0.8rem;
           font-weight: 700;
         }
+      }
+    }
+  }
+
+  .transaction-container {
+    display: flex;
+    gap: 2rem;
+    padding: 0 2rem 2rem 0;
+    height: 30rem;
+
+    > div {
+      background-color: white;
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.132);
+      border-radius: 10px;
+    }
+    .gender-chart {
+      width: 100%;
+      max-width: 20rem;
+      padding: 1rem;
+      position: relative;
+      > h2 {
+        text-align: center;
+        margin: 1.5rem 0 2rem 0;
+        @include heading;
+      }
+      > p {
+        @include posCenter;
+        font-size: 2rem;
+        color: rgba(0, 0, 0, 0.634);
+      }
+    }
+
+    .transaction-box {
+      width: 100%;
+      padding: 1rem;
+      overflow-x: auto;
+      > h2 {
+        margin: 1.5rem 0 0 0;
+        @include heading;
       }
     }
   }
