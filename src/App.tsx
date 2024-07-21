@@ -54,7 +54,6 @@ const App = () => {
             path="/admin/transaction/:id"
             element={<TransactionManagement />}
           />
-          //Deployed
         </Routes>
       </Suspense>
     </Router>
