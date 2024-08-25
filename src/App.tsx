@@ -47,7 +47,7 @@ const App = () => {
           <Route path="/admin/chart/pie" element={<PieCharts />} />
           <Route path="/admin/chart/line" element={<LineCharts />} />
 
-          {/* Apps */}
+          {/* Apps Pages*/}
 
           <Route path="/admin/app/stopwatch" element={<Stopwatch />} />
           <Route path="/admin/app/coupon" element={<Coupon />} />
